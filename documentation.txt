@@ -1,0 +1,34 @@
+Definitie FA:
+M = (Q,Σ,δ,q0,F).
+Q e multime de states
+Σ alfabet
+δ functii de trazitie
+q0 e initial state
+F multime de final states
+
+BNF/EBNF format in json
+
+inJson1 := Q endl Σ endl δ endl q0 endl F   totul e pus linie sub linie  pt identificatori.json
+
+endl := "\n"
+Q := char{char}
+Σ := {char|digit}
+
+δ  := {char","(char|digit)","char}
+q0 := char
+F :=char{char}
+char := 'a'-'z'
+digit = "0"|"1"|...|"9"
+
+inJson2 := Q endl Σ endl δ endl q0 endl F totul e pus linie sub linie pt constante.json
+
+
+endl := "\n"
+Q := char{char}
+Σ := {digit|simbol}
+δ  := {char","(char|digit|simbol)","char}
+q0 := char
+F :=char{char}
+char := 'a'-'z'
+simbol='+'|'-'
+digit = "0"|"1"|...|"9"
